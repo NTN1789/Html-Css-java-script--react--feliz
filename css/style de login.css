@@ -1,0 +1,44 @@
+body{
+
+    margin:0px ;
+    
+}
+
+
+.main-login {
+
+width:100vw ;
+height:100vh ;
+background-color:rgba(0, 0, 255, 0) ;
+display:flex ;
+justify-content:center ;
+align-items:center ;
+}
+
+.left-login{
+width:50vw ;
+height:100vh ;
+display:flex ;
+justify-content:center ;
+align-items:center ; 
+flex-direction:column ;
+}
+
+
+.left-login > h1 {
+
+    color:rgb(212, 233, 212)
+}
+
+.right-login{
+    width:50vw ;
+    height:100vh ;
+    display:flex ;
+    justify-content:center ;
+    align-items:center ; 
+
+}
+
+.card-login{
+    width:60% ;
+}

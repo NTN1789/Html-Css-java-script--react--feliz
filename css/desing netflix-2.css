@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: black;
+    animation: bg 3s forwards;
+}
+
+
+@keyframes bg {
+    0% {
+        background: rgb(5, 5, 5);
+    }
+    50% {
+        background: rgb(3, 3, 3);
+    }
+    100% {
+        background: rgb(14, 13, 13);
+    }
+}
+
+
+
+.netflix {
+    position: relative;
+    width: 360px;
+    height: 520px;
+    overflow: hidden;
+    transform: scale(0.8);
+}
+
+.netflix:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -100px;
+    width: 100%;
+    height: 120px;
+    z-index: 2;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    transform: scaleX(1.5);
+    animation: bg 3s forwards;
+}
+
+.netflix span {
+    position: absolute;
+    top: 0;
+    width: 120px;
+    height: 100%;
+    animation: luz 2s;
+    animation-delay: 2.1;
+}
+
+.netflix span:nth-child(1) {
+    height: 0px;
+    animation: second 2s ;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    background: #f32731;
+    left: 0;
+    z-index: 1;
+    transform-origin: top left;
+    transform: skewX(24.8deg);
+    box-shadow: 0 0 40px rgb(0, 0, 0);
+}
+
+.netflix span:nth-child(2) {
+    animation: first 2s;
+    background: red;
+    left: 0;
+}
+
+.netflix span:nth-child(3) {
+    height: 0px;
+    animation: third 2s ;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+    background: #b00612;
+    right: 0;
+}
+
+h3 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(225, 225, 236);
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    visibility: hidden;
+    animation: text 1s forwards;
+    animation-delay: 4s;
+}
+
+@keyframes text {
+    60% {
+        visibility: visible;
+    }
+    80% {
+        visibility: visible;
+        transform: scale(1.1);
+    }
+    100% {
+        visibility: visible;
+        transform: scale(1);
+    }
+}
+
+
+@keyframes first {
+    0% {
+        height: 0px;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+@keyframes second {
+    0% {
+        height: 0px;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+@keyframes third {
+    0% {
+        height: 0px;
+    }
+    100% {
+        height: 100%;
+    }
+}
